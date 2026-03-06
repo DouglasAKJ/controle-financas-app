@@ -1,90 +1,75 @@
 .transaction-type-selector {
-    display: flex;
-    gap: var(--spacing-sm);
+  display: flex;
+  gap: var(--spacing-sm);
 }
-
 .type-btn {
-    flex: 1;
-    padding: var(--spacing-md);
-    background: var(--bg-input);
-    border: 2px solid var(--border-color);
-    border-radius: var(--border-radius-sm);
-    color: var(--text-secondary);
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all var(--transition-fast);
+  flex: 1;
+  padding: var(--spacing-md);
+  background: var(--bg-input);
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius-sm);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
 }
-
 .type-btn:hover {
-    border-color: var(--text-muted);
-    color: var(--text-primary);
+  border-color: var(--text-muted);
+  color: var(--text-primary);
 }
-
 .type-btn.active.expense {
-    border-color: var(--color-danger);
-    background: rgba(239, 68, 68, 0.15);
-    color: var(--color-danger);
+  border-color: var(--color-danger);
+  background: rgba(239, 68, 68, 0.15);
+  color: var(--color-danger);
 }
-
 .type-btn.active.income {
-    border-color: var(--color-success);
-    background: rgba(16, 185, 129, 0.15);
-    color: var(--color-success);
+  border-color: var(--color-success);
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--color-success);
 }
-
 .form-input.error,
 .form-select.error {
-    border-color: var(--color-danger);
+  border-color: var(--color-danger);
 }
-
 .form-error {
-    display: block;
-    margin-top: var(--spacing-xs);
-    font-size: 0.75rem;
-    color: var(--color-danger);
+  display: block;
+  margin-top: var(--spacing-xs);
+  font-size: 0.75rem;
+  color: var(--color-danger);
 }
-
 .form-error-box {
-    padding: var(--spacing-md);
-    background: rgba(239, 68, 68, 0.15);
-    border: 1px solid var(--color-danger);
-    border-radius: var(--border-radius-sm);
-    color: var(--color-danger);
-    font-size: 0.875rem;
-    margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-danger);
+  font-size: 0.875rem;
+  margin-bottom: var(--spacing-lg);
 }
-
 .modal-actions {
-    display: flex;
-    gap: var(--spacing-md);
-    margin-top: var(--spacing-xl);
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-xl);
 }
-
 .modal-actions .btn {
-    flex: 1;
+  flex: 1;
 }
-
-/* Select styling */
 .form-select {
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23a1a1aa' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 1rem center;
-    padding-right: 2.5rem;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23a1a1aa' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  padding-right: 2.5rem;
 }
-
 .form-select option {
-    background: var(--bg-dark);
-    color: var(--text-primary);
+  background: var(--bg-dark);
+  color: var(--text-primary);
 }
-
-/* Date input styling */
 input[type="date"] {
-    color-scheme: dark;
+  color-scheme: dark;
 }
-
 input[type="date"]::-webkit-calendar-picker-indicator {
-    filter: invert(0.7);
-    cursor: pointer;
+  filter: invert(0.7);
+  cursor: pointer;
 }

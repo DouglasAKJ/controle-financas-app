@@ -1,155 +1,128 @@
 .settings-header {
-    margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--spacing-2xl);
 }
-
 .settings-message {
-    padding: var(--spacing-md) var(--spacing-lg);
-    border-radius: var(--border-radius-sm);
-    margin-bottom: var(--spacing-xl);
-    font-weight: 500;
-    animation: slideUp 0.3s ease;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--spacing-xl);
+  font-weight: 500;
+  animation: slideUp 0.3s ease;
 }
-
 .settings-message.success {
-    background: rgba(16, 185, 129, 0.15);
-    border: 1px solid var(--color-success);
-    color: var(--color-success);
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid var(--color-success);
+  color: var(--color-success);
 }
-
 .settings-message.error {
-    background: rgba(239, 68, 68, 0.15);
-    border: 1px solid var(--color-danger);
-    color: var(--color-danger);
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid var(--color-danger);
+  color: var(--color-danger);
 }
-
 .settings-layout {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: var(--spacing-xl);
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: var(--spacing-xl);
 }
-
-/* Tabs */
 .settings-tabs {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-xs);
-    padding: var(--spacing-md);
-    height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-md);
+  height: fit-content;
 }
-
 .settings-tab {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    padding: var(--spacing-md) var(--spacing-lg);
-    background: transparent;
-    border: none;
-    border-radius: var(--border-radius-sm);
-    color: var(--text-secondary);
-    font-size: 0.95rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all var(--transition-fast);
-    text-align: left;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: transparent;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
 }
-
 .settings-tab:hover {
-    color: var(--text-primary);
-    background: var(--bg-glass);
+  color: var(--text-primary);
+  background: var(--bg-glass);
 }
-
 .settings-tab.active {
-    color: var(--color-primary-light);
-    background: rgba(99, 102, 241, 0.15);
+  color: var(--color-primary-light);
+  background: rgba(99, 102, 241, 0.15);
 }
-
 .tab-icon {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
-
-/* Content */
 .settings-content {
-    min-height: 400px;
+  min-height: 400px;
 }
-
 .settings-content h3 {
-    font-size: 1.25rem;
-    margin-bottom: var(--spacing-sm);
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-sm);
 }
-
 .settings-content form {
-    max-width: 400px;
+  max-width: 400px;
 }
-
-/* Toggle Switch */
 .toggle-label {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  cursor: pointer;
 }
-
 .toggle-label input {
-    display: none;
+  display: none;
 }
-
 .toggle-switch {
-    position: relative;
-    width: 48px;
-    height: 26px;
-    background: var(--bg-input);
-    border: 1px solid var(--border-color);
-    border-radius: 13px;
-    transition: all var(--transition-fast);
+  position: relative;
+  width: 48px;
+  height: 26px;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  border-radius: 13px;
+  transition: all var(--transition-fast);
 }
-
 .toggle-switch::after {
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 20px;
-    height: 20px;
-    background: var(--text-muted);
-    border-radius: 50%;
-    transition: all var(--transition-fast);
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background: var(--text-muted);
+  border-radius: 50%;
+  transition: all var(--transition-fast);
 }
-
-.toggle-label input:checked+.toggle-switch {
-    background: var(--color-primary);
-    border-color: var(--color-primary);
+.toggle-label input:checked + .toggle-switch {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
 }
-
-.toggle-label input:checked+.toggle-switch::after {
-    left: 24px;
-    background: white;
+.toggle-label input:checked + .toggle-switch::after {
+  left: 24px;
+  background: white;
 }
-
 .toggle-text {
-    color: var(--text-primary);
-    font-weight: 500;
+  color: var(--text-primary);
+  font-weight: 500;
 }
-
-/* Responsive */
 @media (max-width: 768px) {
-    .settings-layout {
-        grid-template-columns: 1fr;
-    }
-
-    .settings-tabs {
-        flex-direction: row;
-        overflow-x: auto;
-        padding: var(--spacing-sm);
-    }
-
-    .settings-tab {
-        flex-direction: column;
-        padding: var(--spacing-md);
-        font-size: 0.75rem;
-        min-width: fit-content;
-    }
-
-    .settings-content form {
-        max-width: 100%;
-    }
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+  .settings-tabs {
+    flex-direction: row;
+    overflow-x: auto;
+    padding: var(--spacing-sm);
+  }
+  .settings-tab {
+    flex-direction: column;
+    padding: var(--spacing-md);
+    font-size: 0.75rem;
+    min-width: fit-content;
+  }
+  .settings-content form {
+    max-width: 100%;
+  }
 }

@@ -1,130 +1,109 @@
 .transaction-card {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-md);
-    padding: var(--spacing-md) var(--spacing-lg);
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: var(--border-radius);
-    transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
 }
-
 .transaction-card:hover {
-    background: var(--bg-card-hover);
-    transform: translateX(4px);
+  background: var(--bg-card-hover);
+  transform: translateX(4px);
 }
-
 .transaction-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    font-size: 1.5rem;
-    flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  flex-shrink: 0;
 }
-
 .transaction-info {
-    flex: 1;
-    min-width: 0;
+  flex: 1;
+  min-width: 0;
 }
-
 .transaction-description {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin: 0 0 var(--spacing-xs);
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-xs);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-
 .transaction-meta {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
 }
-
 .transaction-category {
-    padding: 2px 8px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    border-radius: 4px;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
 }
-
 .transaction-date {
-    font-size: 0.75rem;
-    color: var(--text-muted);
+  font-size: 0.75rem;
+  color: var(--text-muted);
 }
-
 .transaction-amount-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: var(--spacing-xs);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-xs);
 }
-
 .transaction-amount {
-    font-size: 1.1rem;
-    font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 700;
 }
-
 .transaction-amount.income {
-    color: var(--color-success);
+  color: var(--color-success);
 }
-
 .transaction-amount.expense {
-    color: var(--color-danger);
+  color: var(--color-danger);
 }
-
 .transaction-actions {
-    display: flex;
-    gap: var(--spacing-xs);
-    opacity: 0;
-    transition: opacity var(--transition-fast);
+  display: flex;
+  gap: var(--spacing-xs);
+  opacity: 0;
+  transition: opacity var(--transition-fast);
 }
-
 .transaction-card:hover .transaction-actions {
-    opacity: 1;
+  opacity: 1;
 }
-
 .transaction-action {
-    padding: 4px 8px;
-    background: transparent;
-    border: none;
-    font-size: 0.875rem;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background var(--transition-fast);
+  padding: 4px 8px;
+  background: transparent;
+  border: none;
+  font-size: 0.875rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background var(--transition-fast);
 }
-
 .transaction-action:hover {
-    background: var(--bg-glass);
+  background: var(--bg-glass);
 }
-
 .transaction-action.delete:hover {
-    background: rgba(239, 68, 68, 0.2);
+  background: rgba(239, 68, 68, 0.2);
 }
-
-/* Mobile responsive */
 @media (max-width: 640px) {
-    .transaction-card {
-        padding: var(--spacing-md);
-    }
-
-    .transaction-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 1.25rem;
-    }
-
-    .transaction-amount {
-        font-size: 1rem;
-    }
-
-    .transaction-actions {
-        opacity: 1;
-    }
+  .transaction-card {
+    padding: var(--spacing-md);
+  }
+  .transaction-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+  .transaction-amount {
+    font-size: 1rem;
+  }
+  .transaction-actions {
+    opacity: 1;
+  }
 }
