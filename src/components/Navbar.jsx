@@ -1,10 +1,8 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
-import { useTheme } from "../contexts/ThemeContext";
 import "./Navbar.css";
 export default function Navbar() {
   const { user, logout } = useAuth();
-  const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
   const handleLogout = async () => {
     await logout();
@@ -47,13 +45,6 @@ export default function Navbar() {
           </NavLink>
         </div>
         <div className="navbar-user">
-          <button
-            onClick={toggleTheme}
-            className="theme-toggle"
-            title={theme === "light" ? "Modo escuro" : "Modo claro"}
-          >
-            {theme === "light" ? "🌙" : "☀️"}
-          </button>
           <span className="navbar-username">{user?.name || "Usuário"}</span>
           <button onClick={handleLogout} className="navbar-logout">
             Sair

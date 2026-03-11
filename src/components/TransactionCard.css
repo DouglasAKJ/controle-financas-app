@@ -1,130 +1,108 @@
 .transaction-card {
   display: flex;
   align-items: center;
-  gap: var(--sp-md);
-  padding: 0.85rem var(--sp-lg);
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius);
-  transition: all var(--ease-fast);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
 }
-
 .transaction-card:hover {
-  box-shadow: var(--shadow-md);
-  border-color: var(--border-strong);
+  background: var(--bg-card-hover);
+  transform: translateX(4px);
 }
-
 .transaction-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: var(--radius-sm);
-  font-size: 1.25rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  font-size: 1.5rem;
   flex-shrink: 0;
 }
-
 .transaction-info {
   flex: 1;
   min-width: 0;
 }
-
 .transaction-description {
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--text-primary);
-  margin: 0 0 2px;
+  margin: 0 0 var(--spacing-xs);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-
 .transaction-meta {
   display: flex;
   align-items: center;
-  gap: var(--sp-sm);
+  gap: var(--spacing-sm);
   flex-wrap: wrap;
 }
-
 .transaction-category {
-  padding: 1px 8px;
-  font-size: 0.7rem;
-  font-weight: 500;
-  border-radius: 100px;
-  letter-spacing: 0.02em;
+  padding: 2px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
 }
-
 .transaction-date {
   font-size: 0.75rem;
   color: var(--text-muted);
 }
-
 .transaction-amount-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: var(--sp-xs);
+  gap: var(--spacing-xs);
 }
-
 .transaction-amount {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 700;
-  font-variant-numeric: tabular-nums;
 }
-
 .transaction-amount.income {
   color: var(--color-success);
 }
-
 .transaction-amount.expense {
   color: var(--color-danger);
 }
-
 .transaction-actions {
   display: flex;
-  gap: var(--sp-xs);
+  gap: var(--spacing-xs);
   opacity: 0;
-  transition: opacity var(--ease-fast);
+  transition: opacity var(--transition-fast);
 }
-
 .transaction-card:hover .transaction-actions {
   opacity: 1;
 }
-
 .transaction-action {
-  padding: 4px 6px;
+  padding: 4px 8px;
   background: transparent;
   border: none;
-  font-size: 0.8rem;
+  font-size: 0.875rem;
   cursor: pointer;
-  border-radius: var(--radius-sm);
-  transition: background var(--ease-fast);
+  border-radius: 4px;
+  transition: background var(--transition-fast);
 }
-
 .transaction-action:hover {
-  background: var(--bg-muted);
+  background: var(--bg-glass);
 }
-
 .transaction-action.delete:hover {
-  background: var(--color-danger-light);
+  background: rgba(239, 68, 68, 0.2);
 }
-
 @media (max-width: 640px) {
   .transaction-card {
-    padding: var(--sp-md);
+    padding: var(--spacing-md);
   }
-
   .transaction-icon {
-    width: 36px;
-    height: 36px;
-    font-size: 1.1rem;
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
   }
-
   .transaction-amount {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
-
   .transaction-actions {
     opacity: 1;
   }
