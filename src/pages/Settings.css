@@ -1,127 +1,156 @@
 .settings-header {
-  margin-bottom: var(--spacing-2xl);
+  margin-bottom: var(--sp-2xl);
 }
+
 .settings-message {
-  padding: var(--spacing-md) var(--spacing-lg);
-  border-radius: var(--border-radius-sm);
-  margin-bottom: var(--spacing-xl);
+  padding: var(--sp-md) var(--sp-lg);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--sp-xl);
   font-weight: 500;
+  font-size: 0.9rem;
   animation: slideUp 0.3s ease;
 }
+
 .settings-message.success {
-  background: rgba(16, 185, 129, 0.15);
+  background: var(--color-success-light);
   border: 1px solid var(--color-success);
   color: var(--color-success);
 }
+
 .settings-message.error {
-  background: rgba(239, 68, 68, 0.15);
+  background: var(--color-danger-light);
   border: 1px solid var(--color-danger);
   color: var(--color-danger);
 }
+
 .settings-layout {
   display: grid;
-  grid-template-columns: 250px 1fr;
-  gap: var(--spacing-xl);
+  grid-template-columns: 220px 1fr;
+  gap: var(--sp-xl);
 }
+
 .settings-tabs {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
-  padding: var(--spacing-md);
+  gap: 2px;
+  padding: var(--sp-md);
   height: fit-content;
 }
+
 .settings-tab {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
-  padding: var(--spacing-md) var(--spacing-lg);
+  gap: var(--sp-md);
+  padding: 0.65rem var(--sp-lg);
   background: transparent;
   border: none;
-  border-radius: var(--border-radius-sm);
+  border-radius: var(--radius-sm);
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: all var(--ease-fast);
   text-align: left;
 }
+
 .settings-tab:hover {
   color: var(--text-primary);
-  background: var(--bg-glass);
+  background: var(--bg-muted);
 }
+
 .settings-tab.active {
-  color: var(--color-primary-light);
-  background: rgba(99, 102, 241, 0.15);
+  color: var(--color-graphite);
+  background: var(--color-champagne);
 }
+
 .tab-icon {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
 }
+
 .settings-content {
   min-height: 400px;
 }
+
 .settings-content h3 {
-  font-size: 1.25rem;
-  margin-bottom: var(--spacing-sm);
+  font-size: 1.15rem;
+  margin-bottom: var(--sp-sm);
 }
+
 .settings-content form {
   max-width: 400px;
 }
+
+/* ── Toggle ── */
+
 .toggle-label {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: var(--sp-md);
   cursor: pointer;
 }
+
 .toggle-label input {
   display: none;
 }
+
 .toggle-switch {
   position: relative;
-  width: 48px;
-  height: 26px;
-  background: var(--bg-input);
+  width: 44px;
+  height: 24px;
+  background: var(--bg-muted);
   border: 1px solid var(--border-color);
-  border-radius: 13px;
-  transition: all var(--transition-fast);
+  border-radius: 12px;
+  transition: all var(--ease-fast);
 }
+
 .toggle-switch::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 2px;
   left: 2px;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background: var(--text-muted);
   border-radius: 50%;
-  transition: all var(--transition-fast);
+  transition: all var(--ease-fast);
 }
-.toggle-label input:checked + .toggle-switch {
-  background: var(--color-primary);
-  border-color: var(--color-primary);
+
+.toggle-label input:checked+.toggle-switch {
+  background: var(--color-graphite);
+  border-color: var(--color-graphite);
 }
-.toggle-label input:checked + .toggle-switch::after {
-  left: 24px;
-  background: white;
+
+.toggle-label input:checked+.toggle-switch::after {
+  left: 22px;
+  background: var(--color-champagne);
 }
+
 .toggle-text {
   color: var(--text-primary);
   font-weight: 500;
 }
+
+/* ── Responsive ── */
+
 @media (max-width: 768px) {
   .settings-layout {
     grid-template-columns: 1fr;
   }
+
   .settings-tabs {
     flex-direction: row;
     overflow-x: auto;
-    padding: var(--spacing-sm);
+    padding: var(--sp-sm);
   }
+
   .settings-tab {
     flex-direction: column;
-    padding: var(--spacing-md);
+    padding: var(--sp-md);
     font-size: 0.75rem;
     min-width: fit-content;
   }
+
   .settings-content form {
     max-width: 100%;
   }
