@@ -1,5 +1,6 @@
-const API_BASE_URL = "http://localhost:8080/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL;
 async function fetchAPI(endpoint, options = {}) {
+
   const token = localStorage.getItem("token");
   const config = {
     headers: {

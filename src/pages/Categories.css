@@ -8,11 +8,12 @@
 }
 .category-form-card {
   margin-bottom: var(--spacing-2xl);
-  animation: slideUp 0.3s ease;
+  animation: slideUp 0.25s ease;
 }
 .category-form-card h3 {
   margin-bottom: var(--spacing-xl);
-  font-size: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 500;
 }
 .form-row {
   display: flex;
@@ -28,10 +29,10 @@
   flex-wrap: wrap;
 }
 .color-btn {
-  width: 36px;
-  height: 36px;
-  border: 3px solid transparent;
-  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  border: 2px solid transparent;
+  border-radius: 6px;
   cursor: pointer;
   transition: all var(--transition-fast);
 }
@@ -39,15 +40,14 @@
   transform: scale(1.1);
 }
 .color-btn.active {
-  border-color: white;
-  box-shadow: var(--shadow-glow);
+  border-color: var(--text-primary);
 }
 .color-input {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   padding: 0;
-  border: 2px solid var(--border-color);
-  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
   cursor: pointer;
   background: transparent;
 }
@@ -76,9 +76,9 @@
   padding: var(--spacing-lg);
 }
 .category-color {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
   flex-shrink: 0;
 }
 .category-info {
@@ -86,8 +86,8 @@
   min-width: 0;
 }
 .category-name {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 500;
   margin: 0 0 var(--spacing-xs);
   white-space: nowrap;
   overflow: hidden;

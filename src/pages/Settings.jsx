@@ -109,14 +109,12 @@ export default function Settings() {
                 className={`settings-tab ${activeTab === "profile" ? "active" : ""}`}
                 onClick={() => setActiveTab("profile")}
               >
-                <span className="tab-icon">👤</span>
                 Perfil
               </button>
               <button
                 className={`settings-tab ${activeTab === "password" ? "active" : ""}`}
                 onClick={() => setActiveTab("password")}
               >
-                <span className="tab-icon">🔒</span>
                 Senha
               </button>
               {}

@@ -10,16 +10,15 @@
 }
 .transaction-card:hover {
   background: var(--bg-card-hover);
-  transform: translateX(4px);
 }
 .transaction-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  font-size: 1.5rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  font-size: 1.25rem;
   flex-shrink: 0;
 }
 .transaction-info {
@@ -27,8 +26,8 @@
   min-width: 0;
 }
 .transaction-description {
-  font-size: 1rem;
-  font-weight: 600;
+  font-size: 0.95rem;
+  font-weight: 500;
   color: var(--text-primary);
   margin: 0 0 var(--spacing-xs);
   white-space: nowrap;
@@ -43,9 +42,11 @@
 }
 .transaction-category {
   padding: 2px 8px;
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 0.7rem;
+  font-weight: 500;
   border-radius: 4px;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
 }
 .transaction-date {
   font-size: 0.75rem;
@@ -58,8 +59,8 @@
   gap: var(--spacing-xs);
 }
 .transaction-amount {
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 600;
 }
 .transaction-amount.income {
   color: var(--color-success);
@@ -80,28 +81,30 @@
   padding: 4px 8px;
   background: transparent;
   border: none;
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   cursor: pointer;
   border-radius: 4px;
-  transition: background var(--transition-fast);
+  color: var(--text-secondary);
+  transition: all var(--transition-fast);
 }
 .transaction-action:hover {
-  background: var(--bg-glass);
+  background: rgba(255, 255, 210, 0.06);
+  color: var(--text-primary);
 }
 .transaction-action.delete:hover {
-  background: rgba(239, 68, 68, 0.2);
+  color: var(--color-danger);
 }
 @media (max-width: 640px) {
   .transaction-card {
     padding: var(--spacing-md);
   }
   .transaction-icon {
-    width: 40px;
-    height: 40px;
-    font-size: 1.25rem;
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
   }
   .transaction-amount {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .transaction-actions {
     opacity: 1;

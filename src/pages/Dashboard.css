@@ -20,47 +20,37 @@
   gap: var(--spacing-lg);
   padding: var(--spacing-xl);
   background: var(--bg-card);
-  backdrop-filter: blur(20px);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
   transition: all var(--transition-normal);
 }
 
 .summary-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  background: var(--bg-card-hover);
 }
 
 .summary-card.balance {
-  background: linear-gradient(135deg,
-      rgba(99, 102, 241, 0.2) 0%,
-      rgba(139, 92, 246, 0.1) 100%);
-  border-color: rgba(99, 102, 241, 0.3);
+  border-left: 3px solid var(--color-primary);
 }
 
 .summary-card.income {
-  background: linear-gradient(135deg,
-      rgba(16, 185, 129, 0.2) 0%,
-      rgba(52, 211, 153, 0.1) 100%);
-  border-color: rgba(16, 185, 129, 0.3);
+  border-left: 3px solid var(--color-success);
 }
 
 .summary-card.expense {
-  background: linear-gradient(135deg,
-      rgba(239, 68, 68, 0.2) 0%,
-      rgba(248, 113, 113, 0.1) 100%);
-  border-color: rgba(239, 68, 68, 0.3);
+  border-left: 3px solid var(--color-danger);
 }
 
 .summary-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
-  background: var(--bg-glass);
-  border-radius: 16px;
-  font-size: 1.75rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  background: rgba(255, 255, 210, 0.05);
 }
 
 .summary-content {
@@ -70,20 +60,21 @@
 }
 
 .summary-label {
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   color: var(--text-secondary);
   font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 .summary-value {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
 }
 
 .transactions-section {
   background: var(--bg-card);
-  backdrop-filter: blur(20px);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-lg);
   padding: var(--spacing-xl);
@@ -99,8 +90,8 @@
 }
 
 .transactions-header h2 {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.125rem;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -108,7 +99,7 @@
   display: flex;
   gap: var(--spacing-xs);
   background: var(--bg-input);
-  padding: 4px;
+  padding: 3px;
   border-radius: var(--border-radius-sm);
 }
 
@@ -117,7 +108,7 @@
   background: transparent;
   border: none;
   color: var(--text-secondary);
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 500;
   border-radius: 6px;
   cursor: pointer;
@@ -130,7 +121,7 @@
 
 .filter-btn.active {
   background: var(--color-primary);
-  color: white;
+  color: var(--bg-dark);
 }
 
 .category-filter {
@@ -144,7 +135,7 @@
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius-sm);
   color: var(--text-primary);
-  font-size: 0.875rem;
+  font-size: 0.8rem;
   font-weight: 500;
   cursor: pointer;
   transition: all var(--transition-fast);
@@ -152,7 +143,7 @@
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239ca3af' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23ffffd2' opacity='0.4' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 12px center;
   padding-right: 32px;
@@ -164,7 +155,6 @@
 
 .category-filter-select:focus {
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
 }
 
 .category-filter-select option {
@@ -189,8 +179,11 @@
 }
 
 .empty-icon {
-  font-size: 3rem;
+  font-size: 1rem;
   margin-bottom: var(--spacing-md);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
 }
 
 .empty-state p {

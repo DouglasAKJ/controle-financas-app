@@ -71,7 +71,7 @@ export default function TransactionCard({ transaction, onEdit, onDelete }) {
               onClick={() => onEdit(transaction)}
               title="Editar"
             >
-              ✏️
+              Editar
             </button>
           )}
           {onDelete && (
@@ -84,7 +84,7 @@ export default function TransactionCard({ transaction, onEdit, onDelete }) {
               }}
               title="Excluir"
             >
-              🗑️
+              Excluir
             </button>
           )}
         </div>

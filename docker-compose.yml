@@ -1,0 +1,30 @@
+services:
+  frontend:
+    build: .
+    container_name: frontend_service
+    ports:
+      - "80:80"
+    env_file:
+      - .env
+    environment:
+      - NODE_ENV=production
+    networks:
+      - public_network
+
+
+  backend:
+    build: ./app
+    container_name: backend_service
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    networks:
+      - public_network
+      - private_network
+
+networks:
+  private_network:
+    driver: bridge
+  public_network:
+    driver: bridge

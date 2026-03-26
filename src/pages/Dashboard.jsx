@@ -208,7 +208,7 @@ export default function Dashboard() {
           { }
           <div className="summary-grid">
             <div className="summary-card balance">
-              <div className="summary-icon">💰</div>
+              <div className="summary-icon">$</div>
               <div className="summary-content">
                 <span className="summary-label">{categorySummary ? "Total" : "Saldo Atual"}</span>
                 <span className="summary-value">
@@ -217,7 +217,7 @@ export default function Dashboard() {
               </div>
             </div>
             <div className="summary-card income">
-              <div className="summary-icon">↗</div>
+              <div className="summary-icon">+</div>
               <div className="summary-content">
                 <span className="summary-label">
                   {categorySummary ? `Entradas - ${categorySummary.categoryName}` : "Entradas"}
@@ -228,7 +228,7 @@ export default function Dashboard() {
               </div>
             </div>
             <div className="summary-card expense">
-              <div className="summary-icon">↙</div>
+              <div className="summary-icon">−</div>
               <div className="summary-content">
                 <span className="summary-label">
                   {categorySummary ? `Saídas - ${categorySummary.categoryName}` : "Saídas"}
@@ -311,7 +311,7 @@ export default function Dashboard() {
             <div className="transactions-list">
               {filteredTransactions.length === 0 ? (
                 <div className="empty-state">
-                  <span className="empty-icon">📭</span>
+                  <span className="empty-icon">—</span>
                   <p>Nenhuma transação encontrada</p>
                   <button
                     className="btn btn-secondary"

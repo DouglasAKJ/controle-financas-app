@@ -12,7 +12,6 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-brand">
-          <span className="navbar-logo">💰</span>
           <span className="navbar-title">FinanceApp</span>
         </div>
         <div className="navbar-menu">
@@ -22,7 +21,6 @@ export default function Navbar() {
               `navbar-link ${isActive ? "active" : ""}`
             }
           >
-            <span className="navbar-icon">📊</span>
             Dashboard
           </NavLink>
           <NavLink
@@ -31,7 +29,6 @@ export default function Navbar() {
               `navbar-link ${isActive ? "active" : ""}`
             }
           >
-            <span className="navbar-icon">🏷️</span>
             Categorias
           </NavLink>
           <NavLink
@@ -40,7 +37,6 @@ export default function Navbar() {
               `navbar-link ${isActive ? "active" : ""}`
             }
           >
-            <span className="navbar-icon">⚙️</span>
             Configurações
           </NavLink>
         </div>

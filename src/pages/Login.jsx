@@ -31,7 +31,7 @@ export default function Login() {
       <div className="auth-container">
         <div className="auth-card glass-card">
           <div className="auth-header">
-            <div className="auth-logo">💰</div>
+            <div className="auth-logo">Finance</div>
             <h1 className="auth-title">FinanceApp</h1>
             <p className="auth-subtitle">
               Controle suas finanças de forma simples

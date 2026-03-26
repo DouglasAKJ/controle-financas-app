@@ -191,7 +191,7 @@ export default function Categories() {
           <div className="categories-grid">
             {categories.length === 0 ? (
               <div className="empty-state glass-card">
-                <span className="empty-icon">🏷️</span>
+                <span className="empty-icon">—</span>
                 <p>Nenhuma categoria criada</p>
                 <button
                   className="btn btn-secondary"
@@ -217,13 +217,13 @@ export default function Categories() {
                       className="btn btn-ghost btn-sm"
                       onClick={() => handleEdit(category)}
                     >
-                      ✏️
+                      Editar
                     </button>
                     <button
                       className="btn btn-ghost btn-sm"
                       onClick={() => handleDelete(category.id)}
                     >
-                      🗑️
+                      Excluir
                     </button>
                   </div>
                 </div>

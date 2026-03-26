@@ -36,7 +36,7 @@ export default function Register() {
       <div className="auth-container">
         <div className="auth-card glass-card">
           <div className="auth-header">
-            <div className="auth-logo">💰</div>
+            <div className="auth-logo">Finance</div>
             <h1 className="auth-title">Criar Conta</h1>
             <p className="auth-subtitle">
               Comece a controlar suas finanças hoje
